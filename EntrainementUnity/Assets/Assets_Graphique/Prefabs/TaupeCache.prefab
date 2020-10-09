@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 2655217385576279455, guid: f616b31ba91f60043861bd9dc8476025,
         type: 3}
       propertyPath: m_Name
-      value: taupe (1)
+      value: TaupeCache
       objectReference: {fileID: 0}
     - target: {fileID: 3490771214192286862, guid: f616b31ba91f60043861bd9dc8476025,
         type: 3}
@@ -73,6 +73,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 9fabd76ae257c0349b42024671ff8a51,
         type: 3}
+    - target: {fileID: 5436436779785522518, guid: f616b31ba91f60043861bd9dc8476025,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.091415524
+      objectReference: {fileID: 0}
+    - target: {fileID: 5436436779785522518, guid: f616b31ba91f60043861bd9dc8476025,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5436436779785522518, guid: f616b31ba91f60043861bd9dc8476025,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7352305026231997789, guid: f616b31ba91f60043861bd9dc8476025,
         type: 3}
       propertyPath: isTaupeCache

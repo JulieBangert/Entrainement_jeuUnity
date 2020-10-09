@@ -1,4 +1,4 @@
-﻿    using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Diagnostics.Tracing;
@@ -8,7 +8,6 @@ using UnityEngine;
 
 public class Taupe : MonoBehaviour
 {
-
     public bool isTaupeCache = false;
 
     public int positionActuelle = 0;
@@ -23,37 +22,28 @@ public class Taupe : MonoBehaviour
         else
         {
             Destroy(gameObject);
-            print("La taupe est KO");
+            //print("La taupe est KO");
             ScoreScript.AugmenterLeScore();
         }
-
     }
 
     void Start()
     {
-        
         StartCoroutine(MyCoroutine());
-
     }
-
 
     IEnumerator MyCoroutine()
     {
-        print("MyCoroutine commence son exécution.");
+        //print("MyCoroutine commence son exécution.");
 
-        Destroy(gameObject, 3.0f);
+        yield return new WaitForSeconds(3);
+
+        Destroy(gameObject);
         if(isTaupeCache == false)
         {
             GameManager.Instance.gestionTaupePerdu();
         }
- 
-        yield return new WaitForSeconds(4);
-        print("MyCoroutine a terminée son exécution.");
         
-        
+        //print("MyCoroutine a terminée son exécution.");
     }
-  
-        
 }
-
-

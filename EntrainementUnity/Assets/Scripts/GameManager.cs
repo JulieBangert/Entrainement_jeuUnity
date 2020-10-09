@@ -19,6 +19,8 @@ public class GameManager : MonoBehaviour
     {
         compteurTaupePerdu++;
 
+        Debug.LogWarning("moins 1");
+
         if(compteurTaupePerdu >= taupeMaxPourDefaite)
         {      
             gestionJeuPerdu();
@@ -27,14 +29,16 @@ public class GameManager : MonoBehaviour
 
     private void gestionJeuPerdu()
     {
-        isJeuEnCours = false;
-        Debug.Log("GAME OVER !");
+        if (isJeuEnCours == true)
+        {
+            isJeuEnCours = false;
 
-        //Jouer un son
+            Debug.Log("GAME OVER !");
 
+            //Jouer un son
+            GetComponent<AudioSource>().Play();
+        }
         //Mettre un texte "Perdu"
-
-        GetComponent<AudioSource>().Play();
     }
 
     private void Awake()
@@ -47,18 +51,5 @@ public class GameManager : MonoBehaviour
         {
             _instance = this;
         }
-    }
-
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

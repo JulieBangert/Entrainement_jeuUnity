@@ -23,14 +23,10 @@ public class TaupeSpawnerScript : MonoBehaviour
         timeBtwSpawns = startTimeBtwSpawns;
     }
 
-   
-
     private void Update()
     {
-
         if (GameManager.Instance.isJeuEnCours)
         {
-
             Taupe[] taupes = GameObject.FindObjectsOfType<Taupe>();
 
             if(taupes.Length == spawnPoint.Length)
@@ -47,14 +43,9 @@ public class TaupeSpawnerScript : MonoBehaviour
 
                 while(isPositionLibre == false)
                 {
-
-                    Debug.Log("Pas de position libre !");
-
                     randPosition = UnityEngine.Random.Range(0, spawnPoint.Length);
 
                     //Tu boucles sur toutes les taupes pour vérifier si randPosition est déjà existant dans une des taupes
-
-                    
 
                     isPositionLibre = true;
 
@@ -67,11 +58,6 @@ public class TaupeSpawnerScript : MonoBehaviour
                     }
                 }
 
-
-
-
-
-
                 GameObject Taupe = Instantiate(taupe[rand], spawnPoint[randPosition].transform.position, Quaternion.identity);
                 Taupe.GetComponent<Taupe>().positionActuelle = randPosition;
                 timeBtwSpawns = startTimeBtwSpawns;
@@ -81,12 +67,5 @@ public class TaupeSpawnerScript : MonoBehaviour
                 timeBtwSpawns -= Time.deltaTime;
             }
         }
-
-           
-         
-
-        
-        
     }
-    
 }
