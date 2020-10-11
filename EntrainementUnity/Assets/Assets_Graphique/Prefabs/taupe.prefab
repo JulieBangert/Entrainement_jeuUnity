@@ -121,3 +121,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 741ad63c7034b8442893e616f68b76e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isTaupeCache: 0
+  positionActuelle: 0
