@@ -7,20 +7,27 @@ public class ChangeScene : MonoBehaviour
 {
     [SerializeField] private string sceneName;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void ChangeCurrentScene()
     {
-        SceneManager.LoadScene(sceneName);
+        if(Application.CanStreamedLevelBeLoaded(sceneName))
+        {
+            SceneManager.LoadScene(sceneName);
+        }
+        else
+        {
+            Debug.Log("Scene Not Found!");
+        }
+    }
+
+    public void ChangeCurrentScene(string sceneName)
+    {
+        if (Application.CanStreamedLevelBeLoaded(sceneName))
+        {
+            SceneManager.LoadScene(sceneName);
+        }
+        else
+        {
+            Debug.Log("Scene Not Found!");
+        }
     }
 }
