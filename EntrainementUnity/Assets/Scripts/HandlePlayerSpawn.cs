@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class HandlePlayerSpawn : MonoBehaviour
 {
-    [SerializeField] private GameObject player;
     private Vector3 lastPos;
 
     // Start is called before the first frame update
@@ -29,8 +28,12 @@ public class HandlePlayerSpawn : MonoBehaviour
         return PlayerPrefs.GetFloat("lastPos");
     }
 
+    //NOTE:
+    //cette fonction n'est pas call si le jeu est quitté depuis une scène autre que FunFair
+    //ce qui fait que le joueur peut garder sa dernière pos si on quite depuis un mini jeu 
     void OnApplicationQuit()
     {
-        PlayerPrefs.DeleteAll();
+        //PlayerPrefs.DeleteAll();
+        PlayerPrefs.DeleteKey("lastPos");
     }
 }

@@ -37,4 +37,13 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
+
+    public void StopMoving()
+    {
+        playerCanMove = false;
+    }
+    public void StartMoving()
+    {
+        playerCanMove = true;
+    }
 }
