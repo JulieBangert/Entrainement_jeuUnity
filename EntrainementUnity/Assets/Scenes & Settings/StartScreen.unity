@@ -802,7 +802,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 778513252}
-        m_MethodName: ChangeCurrentScene
+        m_MethodName: ReturnToFunFair
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

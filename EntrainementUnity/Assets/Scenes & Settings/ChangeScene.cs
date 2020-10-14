@@ -5,13 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class ChangeScene : MonoBehaviour
 {
-    [SerializeField] private string sceneName;
-
-    public void ChangeCurrentScene()
+    public void ReturnToFunFair()
     {
-        if(Application.CanStreamedLevelBeLoaded(sceneName))
+        if (Application.CanStreamedLevelBeLoaded("FunFair"))
         {
-            SceneManager.LoadScene(sceneName);
+            SceneManager.LoadScene("FunFair");
         }
         else
         {
@@ -23,6 +21,12 @@ public class ChangeScene : MonoBehaviour
     {
         if (Application.CanStreamedLevelBeLoaded(sceneName))
         {
+            // enregistrer la dernière position du joueur dans la scène
+            if(GameObject.Find("Player").GetComponent<HandlePlayerSpawn>())
+            {
+                GameObject.Find("Player").GetComponent<HandlePlayerSpawn>().RegisterLastPlayerPosition();
+            }
+
             SceneManager.LoadScene(sceneName);
         }
         else
