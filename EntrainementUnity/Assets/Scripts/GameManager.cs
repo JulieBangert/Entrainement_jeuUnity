@@ -27,7 +27,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void gestionJeuPerdu()
+    public void gestionJeuPerdu()
     {
         if (isJeuEnCours == true)
         {
