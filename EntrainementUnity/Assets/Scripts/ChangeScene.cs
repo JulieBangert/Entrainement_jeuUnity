@@ -33,6 +33,7 @@ public class ChangeScene : MonoBehaviour
         else
         {
             Debug.Log("Scene Not Found!");
+
         }
     }
 
@@ -45,3 +46,4 @@ public class ChangeScene : MonoBehaviour
         SceneManager.LoadScene(sceneName);
     }
 }
+
